@@ -147,4 +147,15 @@ class SiteController extends Controller
             return $this->render('entry', ['model' => $model]);
         }
     }
+	
+	public actionSendmail()
+	{
+		Yii::$app->mailer->compose('contact/html')
+		 ->setFrom('smittaldm7@gmail.com')
+		 ->setTo('smittaldm7@gmail.com')
+		 ->setSubject("testing yaar")
+		 ->setTextBody("Boom boom w")
+		 ->send();
+		  return $this->render('about');
+	}
 }
