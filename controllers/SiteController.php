@@ -150,7 +150,7 @@ class SiteController extends Controller
 	
 	public function actionSendmail()
 	{
-		Yii::$app->mailer->compose('contact/html')
+		Yii::$app->mailer->compose()
 		 ->setFrom('smittaldm7@gmail.com')
 		 ->setTo('smittaldm7@gmail.com')
 		 ->setSubject("testing yaar")
