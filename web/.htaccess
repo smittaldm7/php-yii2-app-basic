@@ -1,4 +1,6 @@
 RewriteEngine on
+# if $showScriptName is false in UrlManager, do not allow accessing URLs with script name
+RewriteRule ^index.php/ - [L,R=404]
 # If a directory or a file exists, use it directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
