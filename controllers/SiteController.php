@@ -68,6 +68,14 @@ class SiteController extends Controller
 		 ->setSubject("testing yaar")
 		 ->setTextBody("Boom boom w")
 		 ->send();
+		 // the message
+		$msg = "First line of text\nSecond line of text";
+
+		// use wordwrap() if lines are longer than 70 characters
+		$msg = wordwrap($msg,70);
+
+		// send email
+		mail("smittaldm7@gmail.com","My subject",$msg);
         return $this->render('index');
     }
 
