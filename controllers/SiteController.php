@@ -64,18 +64,30 @@ class SiteController extends Controller
     {
 		Yii::$app->mailer->compose()
 		 ->setFrom('sidharth.mittal@dudesweet.tk')
-		 ->setTo('smittaldm7@gmail.com')
+		 ->setTo('sidharth.mittal@dudesweet.tk')
 		 ->setSubject("testing yaar")
 		 ->setTextBody("Boom boom w")
 		 ->send();
 		 // the message
-		$msg = "First line of text\nSecond line of text";
+		$sender = 'sidharth.mittal@dudesweet.tk';
 
-		// use wordwrap() if lines are longer than 70 characters
-		$msg = wordwrap($msg,70);
 
-		// send email
-		mail("smittaldm7@gmail.com","My subject",$msg);
+$recipient = 'sidharth.mittal@dudesweet.tk';
+
+$subject = "php mail test";
+$message = "php test message";
+$headers = 'From:' . $sender;
+
+if (mail($recipient, $subject, $message, $headers))
+{
+    echo "Message accepted";
+}
+else
+{
+    echo "Error: Message not accepted";
+}
+
+
         return $this->render('index');
     }
 
