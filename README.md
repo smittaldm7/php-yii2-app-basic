@@ -10,7 +10,7 @@ create a controller class file and add acitons
 Can manipulate the table data using the Active Record class methods.
 	We create actionIndexPagination
 
-Then used the gii generator accessible at http://localhost/yii-app-basic-getting-started-guide/web/gii
+Then used the gii generator accessible at http://localhost/yii-app-basic-countries/web/gii
 	
 	1. to create model class (does nto create an empty model class whihc would work fine. Has additional crap viz basically restrictions in the PHP layer probably useful for validation in yii forms like those used for gii generated admin pages. 
 	
