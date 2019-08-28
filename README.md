@@ -1,3 +1,47 @@
+Hello World app with Yii
+Followed this getting started guide to create country active record and controller: https://www.yiiframework.com/doc/guide/2.0/en/start-installation
+
+
+create a table Country, populated it.
+
+create the active record class file for the table which is a dao and model class rolled into one. 
+
+create a controller class file and add acitons 
+Can manipulate the table data using the Active Record class methods.
+	We create actionIndexPagination
+
+Then used the gii generator accessible at http://localhost/yii-app-basic-getting-started-guide/web/gii
+	
+	1. to create model class (does nto create an empty model class whihc would work fine. Has additional crap viz basically restrictions in the PHP layer probably useful for validation in yii forms like those used for gii generated admin pages. 
+	
+	2. to create admin management pages(yii calls these CRUD pages - morons) (different from crud methods of the DAO class)controller and views that provide admin operations for creating, reading, updating and deleting entries
+		Controller Actions added. creates corresponding controller if not created
+			actionIndex - manage all entries age
+			actionCreate
+			actionView
+			actionUpdate
+			actionDelete
+		View pages added. creates corresponding view folder also if not created
+			create
+			_form
+			index
+			_search (created if search model class name is given)
+			update
+			delete
+		Model Class
+			CountrySearch.php (created if search model class name is given)
+
+Country table: Using gii, generated model/DAO/AR class file and admin management pages with search 
+
+Continent table: Using gii, generated model/DAO/AR class file and admin management pages (without search)
+
+Planets table: Using gii, generated model/DAO/AR class file
+
+Citizen table: manually created model/DAO/AR class file and controller with an action that calls Create, Read, Update and Delete methods
+
+		
+
+
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">

@@ -62,33 +62,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-		Yii::$app->mailer->compose()
-		 ->setFrom('sidharth.mittal@dudesweet.tk')
-		 ->setTo('sidharth.mittal@dudesweet.tk')
-		 ->setSubject("testing yaar")
-		 ->setTextBody("Boom boom w")
-		 ->send();
-		 // the message
-		$sender = 'sidharth.mittal@dudesweet.tk';
+		
 
 
-$recipient = 'sidharth.mittal@dudesweet.tk';
-
-$subject = "php mail test";
-$message = "php test message";
-$headers = 'From:' . $sender;
-
-if (mail($recipient, $subject, $message, $headers))
-{
-    echo "Message accepted";
-}
-else
-{
-    echo "Error: Message not accepted";
-}
-
-
-//        return $this->render('index');
+        return $this->render('index');
     }
 
     /**
@@ -183,5 +160,33 @@ else
 		 ->setTextBody("Boom boom w")
 		 ->send();
 		  return $this->render('about');
-	}
-}
+    }
+
+    public function actionSendmail2()
+    {
+          Yii::$app->mailer->compose()
+         ->setFrom('sidharth.mittal@dudesweet.tk')
+         ->setTo('sidharth.mittal@dudesweet.tk')
+         ->setSubject("testing yaar")
+         ->setTextBody("Boom boom w")
+         ->send();
+         // the message
+        $sender = 'sidharth.mittal@dudesweet.tk';
+
+
+        $recipient = 'sidharth.mittal@dudesweet.tk';
+
+        $subject = "php mail test";
+        $message = "php test message";
+        $headers = 'From:' . $sender;
+
+        if (mail($recipient, $subject, $message, $headers))
+        {
+            echo "Message accepted";
+        }
+        else
+        {
+            echo "Error: Message not accepted";
+        }
+        	}
+    }
